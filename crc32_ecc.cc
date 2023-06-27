@@ -365,13 +365,6 @@ bool test_ecc(ecc_code_word ecw) {
 }  // namespace
 
 int main() {
-  if constexpr (false) {
-  for (auto [synd, bit_0, bit_1] : synd_1bit) {
-    std::cout << std::hex << std::setw(8) << synd << ' '
-              << std::setw(4) << bit_0 << ' ' << std::setw(4) << bit_1 
-              << std::dec << '\n';
-  }
-  }
   // Test.
   for (int i = 0; i < 100; ++i) {
     std::cout << "Test #" << i << std::endl;
