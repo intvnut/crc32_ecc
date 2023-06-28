@@ -197,7 +197,7 @@ std::ostream& operator<<(std::ostream& os, const error_info& ei) {
 error_info check_ecw(const ecc_code_word& ecw) {
   const uint32_t crc = compute_crc(ecw);
   const uint32_t synd = crc ^ get_crc_word(ecw);
-//std::cout << std::hex << "crc=" << crc << " synd=" << synd << '\n';
+
   if (!synd) {
     return error_info{};  // no errors.
   }
