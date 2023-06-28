@@ -156,7 +156,7 @@ const auto synd_2bit = []{
       const uint32_t crc = compute_crc(ecw);
       xor_crc_word(ecw, crc);
       
-      s.at(k++) = synd_to_bits(get_crc_word(ecw), i, j);
+      s[k++] = synd_to_bits(get_crc_word(ecw), i, j);
 
       xor_crc_word(ecw, crc);
       toggle_ecw_bit(ecw, j);
